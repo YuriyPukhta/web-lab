@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    border: 3px solid $Color-s;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.signupbtn, cancelbtn {
+    background-color: $Color-f;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+signupbtn:hover, cancelbtn:hover {
+    background-color: $Color-f-h;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: $Color-f-hz;
+    width: 100%;
+}
+
+.main {
+    float: left;
+    width: 50%;
+    transform: translate(50%, 25%);
+}
+
+.left {
+    float: left;
+    width: 20%;
+}
+
+.right {
+    float: left;
+    width: 20%;
+}
+
+.sign-up-class {
+    float: right;
+}
+
+@media {
+    screen {
+        and {
+            (max-width {
+				&: {
+					300px) {
+                span.psw {
+                    display: block;
+                    float: none;
+                }
+            }
+        }
+    }
+}
+}
