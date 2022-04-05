@@ -1,0 +1,121 @@
+.list{
+    overflow:hidden; 
+    width: 50%;
+    float: left;
+}
+
+.list-ul{
+  overflow-y:scroll;
+  height:350px;
+  width:100%;
+  background-color: #333333;
+  list-style-type: none;
+  padding: 0;
+  margin: 20px;
+}
+
+
+.list-element a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.list-element a:hover {
+  background-color: #111111;
+}
+
+body{
+background-size: cover;
+  background-repeat: no-repeat;
+ /* background-image: url("https://cdn.wallpapersafari.com/63/17/gzeJUo.jpg");*/
+}
+
+.change-user-info a{
+  color: white;
+  text-decoration: none;
+}
+.change-user-info input[type=text]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.change-user-info input[type=submit] {
+  width: 100%;
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.change-user-info input[type=submit]:hover {
+  background-color: #45a049;
+}
+.change-user-infop {
+  margin: 8px 0;
+  margin: 8px 0;
+  color: white;
+}
+
+.content{
+    overflow:hidden; 
+    width: 50%;
+    float: left;
+}
+.change-user-info {
+  width: 85%;
+  float: left;
+  border-radius: 5px;
+  background-color: #4c586b;
+  padding: 20px;
+  height:350px;
+  margin: 20px;
+  margin-right: 7%;
+
+}
+@keyframes anim {
+  from {
+    opacity: 0;
+    transform: translateY(15%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@media screen and (max-width: 800px) {
+ .content{
+    overflow:hidden; 
+    width: 60%;
+    margin: auto;
+    float: none;
+      margin-top: 20px;
+  }
+.list{
+    overflow:hidden; 
+    width: 60%;
+    margin: auto;
+    float: none;
+      margin-top: 20px;
+}
+.change-user-info {
+  margin: auto;
+
+  float: none;
+}
+.list-ul{
+  margin: auto;
+  float: none;
+}
+
+}
