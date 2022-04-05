@@ -38,6 +38,7 @@ body
   justify-content: center;
     float: center;
     padding: 16px;
+    padding-top: 15%;
 }
 button.search-button{
   background-color: #333333;
