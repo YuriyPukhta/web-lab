@@ -1,0 +1,95 @@
+@import "colors.scss";
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: $Color-HZ1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+button {
+}
+
+.signupbtn:hover, .cancelbtn:hover {
+    opacity: 1;
+}
+
+.signupbtn {
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    background-color: $Color-HZ2;
+}
+
+.cancelbtn {
+    padding: 14px 20px;
+    float: right;
+    width: 20%;
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.container {
+    padding: 16px;
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+    float: left;
+    transform: translate(50%, 25%);
+}
+
+.Sign-Up {
+    float: left;
+    width: 30%;
+}
+
+.clearfix {
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
+@media {
+    screen {
+        and {
+            (max-width {
+				&: {
+					300px) {
+                .cancelbtn, .signupbtn {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+}
