@@ -1,7 +1,13 @@
+body
+{
+  color: white;
+}
 .list{
     overflow:hidden; 
-    width: 50%;
-    float: left;
+    width: 60%;
+    margin: auto;
+    float: none;
+    margin-top: 0px;
 }
 
 .list-ul{
@@ -11,7 +17,7 @@
   background-color: #333333;
   list-style-type: none;
   padding: 0;
-  margin: 20px;
+  margin-top: 0px;
 }
 
 
@@ -33,7 +39,7 @@ background-size: cover;
  /* background-image: url("https://cdn.wallpapersafari.com/63/17/gzeJUo.jpg");*/
 }
 
-.change-user-info a{
+.change-user-info label{
   color: white;
   text-decoration: none;
 }
@@ -41,10 +47,17 @@ background-size: cover;
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  color: white;
+  /*width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
   display: block;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box;
+  box-sizing: border-box;*/
 }
 .change-user-info input[type=submit] {
   width: 100%;
@@ -56,30 +69,75 @@ background-size: cover;
   border-radius: 4px;
   cursor: pointer;
 }
-
+/*
 .change-user-info input[type=submit]:hover {
   background-color: #45a049;
-}
+}*/
 .change-user-infop {
   margin: 8px 0;
   margin: 8px 0;
   color: white;
 }
-
+.list-of-ticket{
+    background-color: #111111;
+    border-radius: 10px 10px 0% 0%;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    margin-top: 10px;
+    color: white;
+    width: 100%;
+}
+option{
+    background-color: #333333;
+    padding: 20px;
+}
 .content{
-    overflow:hidden; 
-    width: 50%;
-    float: left;
+  display: none; 
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 100px;
+}
+
+.up-user-interface{
+    border-radius: 10px;
+    background-color: rgb(224,34,123, 0);  
+}
+.User-button-create{
+  float: right;
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 10px;
+}
+.User-button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 10px;
 }
 .change-user-info {
-  width: 85%;
-  float: left;
+  width: 70%;
+  margin: auto;
   border-radius: 5px;
   background-color: #4c586b;
   padding: 20px;
   height:350px;
-  margin: 20px;
-  margin-right: 7%;
 
 }
 @keyframes anim {
@@ -94,19 +152,19 @@ background-size: cover;
   }
 }
 @media screen and (max-width: 800px) {
- .content{
+ /*.content{
     overflow:hidden; 
     width: 60%;
     margin: auto;
     float: none;
       margin-top: 20px;
-  }
+  }*/
 .list{
     overflow:hidden; 
     width: 60%;
     margin: auto;
     float: none;
-      margin-top: 20px;
+    margin-top: 20px;
 }
 .change-user-info {
   margin: auto;
@@ -117,5 +175,4 @@ background-size: cover;
   margin: auto;
   float: none;
 }
-
 }
