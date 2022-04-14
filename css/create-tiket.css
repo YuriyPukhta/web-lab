@@ -2,6 +2,7 @@ body{
 background-size: cover;
   background-repeat: no-repeat;
   background-image: url("https://cdn.wallpapersafari.com/63/17/gzeJUo.jpg");
+  height: 100%;
 }
 
 input[type=text], select {
