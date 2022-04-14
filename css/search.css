@@ -22,6 +22,13 @@ body
     margin:0;
     padding: 0;
 }
+.everything{
+  margin:auto;
+  width: 80%;
+  margin-top: 5em;
+  background-color: #453EC3; 
+  border-radius: 10px;
+}
 .site-search-class label {
     display: block;
     font: 1rem 'Fira Sans', sans-serif;
@@ -30,7 +37,10 @@ body
 
 .site-search-class input, .site-search-class label {
     margin: .4rem 0;
-
+}
+#site-search
+{
+    border-radius: 10px;
 }
 .site-search-class
 {
@@ -38,15 +48,15 @@ body
   justify-content: center;
     float: center;
     padding: 16px;
-/*    margin-top: 15%;*/
 }
-button.search-button{
+.search-button{
   background-color: #333333;
   color: white;
   padding: 5px;
   margin: 5px;
+  border-radius: 10px;
 }
-button.search-button:hover{
+.search-button:hover{
   background-color: #111111;
   color: white;
 }
@@ -60,21 +70,36 @@ button.search-button:hover{
         color: white;
 }
 .table-body a {
-        color: white;
+    color: white;
+    border-radius: 10px;
+}
+.tr-table{
+    margin: 5px;
+    border: 2px white;
+    border-radius: 10px;
+}
+.tr-table:hover{
+    animation:anim 1s; 
 }
 
 .table {
-    border-collapse: collapse;
+    border-collapse: seperate;
     border: 2px solid rgb(200, 200, 200);
     letter-spacing: 1px;
     font-family: sans-serif;
     font-size: .8rem;
     width: 100%;
+    background-color: #DFDFED;
+    border-radius: 10px;
 }
 
 .tb-table,.th-table {
     border: 1px solid rgb(190, 190, 190);
     padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.tb-table:hover,.th-table:hover { 
 }
 
 .tb-table {
@@ -86,16 +111,23 @@ button.search-button:hover{
     margin: auto;
     padding: 16px;
     width:80%;
-    animation:anim 1s ;  
+    animation:anim 2s ;  
 }
 @keyframes anim {
   from {
     opacity: 0;
     transform: translateY(15%);
+
   }
 
   to {
     opacity: 1;
     transform: translateY(0%);
+    /*
+    padding: 25px;
+    position: absolut;
+    */
   }
 }
+
+
