@@ -2,9 +2,61 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Register</title>
   <link rel="stylesheet" type="text/css" href="css/menu.css">
   <link rel="stylesheet" type="text/css" href="css/register.css">
+  <script src="registr.js"></script>
+  <script>/*
+const register_url = 'http://localhost:6996/user';
+async function register(id)
+{
+  const inputs = document.getElementById(id).elements;
+    var name=inputs['Name'].value;
+    var username=inputs['Username'].value;
+    var password=inputs['Password'].value;
+
+    var Rpassword=inputs['Password-r'].value;
+    const select = document.getElementById('Status');
+    var status = select.options[select.selectedIndex].value;
+if (Rpassword != password){
+  alert( ":(((" );
+}
+  data = {
+    "name": name,
+    "username": username,
+    "password": password,
+    "rang": status
+  } 
+ console.log(JSON.stringify(data));
+ var url = register_url;
+ const response = await fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json'
+     }
+  }).then(async (response) => {
+    
+     console.log(response.status);
+     var res= await response.json();
+     console.log(res);
+    if(response.status == 200){
+      var token = res.access_token
+      localStorage.setItem('token', token);
+      console.log(':)))');
+      console.log(token);
+    }
+    else{
+      alert( res.info );
+      var result = confirm("you arent unique. please be, ok?");
+      if (!result){
+      window.location.replace("./login.html");
+            //Location.reload()
+            //window.location.replace("http://stackoverflow.com");
+      }
+  }
+  });
+}*/
+  </script>
 </head>
 <style>
 
@@ -18,29 +70,39 @@
           </ul>
       </nav>
   </header>
+  
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <div class="container">
-    <h1 class = "Sign-Up">Sign Up</h1>
-     <button type="button" class="cancelbtn">Cancel</button>
 
-  <br>
-  <br>
-  <br>
-  <br>
-    <br>
-    <form class = "register-form">
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
+   <form id ="register" class="register">
+   <div class="up-container">
+   <h1 class = "Sign-Up">Sign Up</h1>
+  <button typ
+  e="button" class="cancelbtn">Cancel</button>
+  </div>
+  <p class = "labe">Say some thing about your self</p>
+    <label for="Name">Name</label>
+    <input type="text" id="Name" name="Name" placeholder="Yourname" requret>
+    <label for=" Username">Username</label>
+    <input type="text" id="Username" name="Username" placeholder="Username" requret>
+    <label for=" Password">Password</label>
+    <input type="Password" id="Password" name="Password" placeholder="Password" requret>
+    <label for=" Password-r">Password again</label>
+    <input type="Password" id="Password-r" name="Password-r" placeholder="Password" requret>
+    <label for="Status">Status</label>
+    <select id="Status" name="Status">
+      <option value="Admin">Admin</option>
+      <option value="Slaves">Slaves</option>
+    </select>
+  
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+     </form>   
+     <button onclick="register('register')" class = "button-Do">DO</button>
 
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-   
-    <div class="clearfix">
-      <button type="submit" class="signupbtn">Sign Up</button>
-    </form>
-    </div>
   </div>
 
 </body>

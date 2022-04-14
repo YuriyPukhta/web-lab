@@ -6,17 +6,90 @@
 
 <link rel="stylesheet" type="text/css" href="css/menu.css">
 <link rel="stylesheet" type="text/css" href="css/account.css">
-<script src="account.js"></script>
 <script>
+const get_list_created = "http://localhost:6996/buy"
+const get_list_bought = "http://localhost:6996/tickets"
 
-
-var modal = document.getElementById('id');
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+async function GetUserList(e) 
+{
+  alert(e.target.value);
+  var url;
+  var token = localStorage.getItem('token');
+  if(token == null)
+  {
+    window.location.replace("./login.html");
   }
+  const query =  e.target.value
+  if (query =='bought'){
+    url = get_list_bought;
+  }
+  else if(query == 'created'){
+    url = get_list_created;
+  }
+  else{
+    return 0;
+  }
+  var myList = document.getElementById('id-list');
+
+  let h = new Headers({
+      'Access-Control-Allow-Origin': '*'
+  });
+  let auth = 'Bearer ' + token;
+  h.append('Authorization', auth);
+  console.log(auth);
+  const request = new Request(url, 
+  {
+    method: 'GET',
+    credentials: 'same-origin',
+    mode:'cors',
+    headers: h
+  });
+ 
+  const response = await fetch(request).then(async (response) => {
+     console.log(response.status);
+     /response.json()/
+     var res= await response.json();
+    if(response.status == 200){
+      console.log(':)))');
+      /*window.location.replace("http://stackoverflow.com");*/
+    }
+    else if(response.status == 401){
+      console.log(':)))');
+      /*window.location.replace("./login");*/
+    }
+    else{
+      console.log(':(((');
+      return 0;
+    }
+    console.log(res)
+    myList.innerHTML = '';
+    for (var i = 0; i < res.length; i++) {
+            var ticket = res[i]
+            var name; 
+            if (ticket.name == null){
+              name = ticket.namefilm;
+            }
+            else{
+              name = ticket.name;
+            }
+            let li = document.createElement("li");
+            li.className = "list-element";
+            var a = document.createElement('a');
+            console.log(ticket);
+            a.textcontent = ticket.id
+            let linkText = document.createTextNode(name);
+            a.appendChild(linkText);
+            a.href = url+'/ticket?id='+ticket.id;
+
+            li.appendChild(a);
+            myList.appendChild(li);
+    }
+  return 0;
+});
 }
+
+
+
 </script>
 </head>
 
@@ -86,6 +159,13 @@ window.onclick = function(event) {
     <body>
     <script>
 
+    var modal = document.getElementById('id');
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+}
 </script>
   <br>
     </div>     

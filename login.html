@@ -3,8 +3,9 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Rating of students</title>
-          <link rel="stylesheet" type="text/css" href="css/menu.css">
-  <link rel="stylesheet" type="text/css" href="css/login.css">
+        <link rel="stylesheet" type="text/css" href="css/menu.css">
+        <script src="login.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/login.css">
 <style type="text/css">
 </style>
 </head>
@@ -17,25 +18,24 @@
             <li class ="menu-li"><a href="search.html" class = "menu-li-a">Events</a></li>
           </ul>
       </nav>
-</header>
-<br>
-<br>
+  </header>
+<header><br><br>
 
 <div class = "main">
-  <form class="container">
+  <form class="container" id = 'login-form'>
     <label for="uname"><b>Username</b></label>
-    <input type="text" id="uname" placeholder="Enter Username" name="uname" required>
+    <input type="text" placeholder="Enter Username" name="uname">
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" id ="psw" placeholder="Enter Password" name="psw" required>
-        
-    <button class = "signupbtn" type="submit">Login</button>
+    <input type="password" placeholder="Enter Password" name="psw" >
+  </form>
+    <button onclick="login('login-form')">Login</button>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
-            <a class = "sign-up-class" href="https://developer.mozilla.org">Sign Up</a>
+            <a class = "sign-up-class"href="https://developer.mozilla.org">Sign Up</a>
     </label>
 
-  </form>
+
 </div>
-</body>
-</html>
+<body>
+<html>
