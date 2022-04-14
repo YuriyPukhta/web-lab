@@ -1,0 +1,17 @@
+{
+  "name": "laba-web",
+  "version": "1.0.0",
+  "description": "my lab for web ",
+  "main": "index.js",
+  "scripts": {
+    "test": "account.html",
+    "lint": "eslint account.js  ticket.js login.js registr.js --ignore-pattern node_modules/"
+  },
+  "author": "me",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1"
+  }
+}
